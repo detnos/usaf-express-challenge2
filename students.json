@@ -1,0 +1,74 @@
+[
+    {
+        "id": 1,
+        "name": [
+            "Katlyn",
+            "Quigley"
+        ],
+        "grades": {
+            "Reading": "A",
+            "Writing": "B",
+            "Ryhtmetic": "C"
+        }
+    },
+    {
+        "id": 2,
+        "name": [
+            "Zelma",
+            "Mills"
+        ],
+        "grades": {
+            "Reading": "A",
+            "Writing": "B",
+            "Ryhtmetic": "C"
+        }
+    },
+    {
+        "id": 3,
+        "name": [
+            "Elias",
+            "Feil"
+        ],
+        "grades": {
+            "Reading": "A",
+            "Writing": "B",
+            "Ryhtmetic": "C"
+        }
+    },
+    {
+        "id": 4,
+        "name": [
+            "Shana",
+            "Mayer"
+        ],
+        "grades": {
+            "Reading": "A",
+            "Writing": "B",
+            "Ryhtmetic": "C"
+        }
+    },
+    {
+        "id": 5,
+        "name": [
+            "Ebba",
+            "O'Reilly"
+        ],
+        "grades": {
+            "Reading": "A",
+            "Writing": "B",
+            "Ryhtmetic": "C"
+        }
+    },
+    {
+        "id": 6,
+        "name": [
+            "Modesta",
+            "Jakubowski"
+        ],
+        "grades": {
+            "Reading": "A",
+            "Writing": "B",
+            "Ryhtmetic": "C"
+        }
+    }
+]
