@@ -8,6 +8,10 @@ app.use(bodyParser.json());
 
 app.get('/', (req, res) => res.send(req.query))
 
+app.get('/students', (req, res) => {
+    res.send(students);
+})
+
 app.get('/students/:studentid', (req, res) => {
     /* GET a user by their id --COMPLETE*/
     let id = req.params.studentid;
@@ -20,23 +24,29 @@ app.get('/grades/:studentid', (req, res) => {
     res.send(students.filter(student => student.id == id)[0].grades)
 })
 
-app.post('/', (req, res) => {
+app.post('/grades', (req, res) => {
     /* POST user data using the request body --COMPLETE*/
-    let id = users[users.length - 1].id + 1;
+    let id = req.body.id;
     let name = req.body.name;
-    let profilePic = req.body.profilePic;
-    let lastCalled = req.body.lastCalled;
-    let timesCalled = req.body.timesCalled;
-    let notes = req.body.notes;
+    let grades = req.body.grades;
 
     /*TODO - add functionality to update the file*/
 
-    res.send(`User added with id ${id}. ${name[0]} ${name[1]}'s information has been posted`);
+    res.send(`${name[0]} ${name[1]}'s grade has been updated`);
 })
 
-app.get('/students', (req, res) => {
-    res.send(students);
+app.post('/register', (req, res) => {
+    /* POST user data using the request body --COMPLETE*/
+    let id = students[students.length - 1].id + 1;
+    let name = req.body.name;
+    let grades = req.body.grades;
+
+    /*TODO - add functionality to update the file*/
+
+    res.send(`Student added with id ${id}. ${name[0]} ${name[1]}'s information has been added to the student list`);
 })
+
+
 
 const port = 3000
 app.listen(port, () => console.log(`Example app listening at http://localhost:${port}`))
