@@ -9,7 +9,12 @@ app.use(bodyParser.json());
 app.get('/', (req, res) => res.send(req.query))
 
 app.get('/students', (req, res) => {
-    res.send(students);
+    let query = req.query;
+    if (query.search === undefined) {
+        res.send(students);
+    } else {
+        res.send(students.filter(student => student.name[0] == query.search));
+    }
 })
 
 app.get('/students/:studentid', (req, res) => {
